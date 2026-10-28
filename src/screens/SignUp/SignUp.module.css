@@ -1,0 +1,85 @@
+.screen {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-7);
+    padding: var(--space-5) var(--space-6) 40px;
+}
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Lets the back arrow's 44px hit area overhang so the icon lines up with the text */
+    margin: 0 -10px;
+}
+
+.back {
+    width: var(--touch);
+    height: var(--touch);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    color: var(--text);
+
+    &:hover {
+        background: var(--track);
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.title {
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: var(--muted);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.formError {
+    font-size: 14px;
+    color: var(--danger);
+}
+
+.submit {
+    margin-top: var(--space-2);
+}
+
+.note {
+    display: flex;
+    gap: var(--space-3);
+    align-items: flex-start;
+    padding: 14px var(--space-4);
+    border-radius: var(--radius-lg);
+    background: var(--soft);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.noteIcon {
+    flex-shrink: 0;
+    margin-top: 1px;
+    color: var(--accent);
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 15px;
+    color: var(--muted);
+}

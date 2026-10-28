@@ -1,0 +1,61 @@
+/* Every color, radius and spacing value lives here. Components use var(--token) only. */
+/* Light by default; dark only via the manual toggle (data-theme="dark" on <html>). */
+
+:root {
+    color-scheme: light;
+
+    --bg: #f7f6f3;
+    --card: #ffffff;
+    --field: #ffffff;
+    --track: #eceae5;
+    --text: #1f1e1c;
+    --muted: #64625d;
+    --line: #e3e0da;
+    --accent: #2f6b8a;
+    --accent-text: #ffffff;
+    --soft: #e6eff4;
+    --feed-soft: #e6eff4;
+    --feed-ink: #2b6280;
+    --diaper-soft: #f6eddf;
+    --diaper-ink: #8a5212;
+    --danger: #b42318;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 14px;
+    --radius-xl: 18px;
+    --radius-2xl: 22px;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 28px;
+    --space-8: 36px;
+
+    --font: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --touch: 44px;
+    --focus-ring: 0 0 0 3px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+:root[data-theme='dark'] {
+    color-scheme: dark;
+
+    --bg: #141414;
+    --card: #1e1e1d;
+    --field: #1a1a19;
+    --track: #232322;
+    --text: #f2f1ee;
+    --muted: #a3a19b;
+    --line: #33322f;
+    --accent: #86bcd6;
+    --accent-text: #0e1a20;
+    --soft: #1b2a32;
+    --feed-soft: #1b2a32;
+    --feed-ink: #86bcd6;
+    --diaper-soft: #2e2518;
+    --diaper-ink: #e2b074;
+    --danger: #f97066;
+}
