@@ -1,0 +1,42 @@
+.button {
+    min-height: var(--touch);
+    height: 52px;
+    padding: 0 var(--space-5);
+    border: 0;
+    border-radius: var(--radius-lg);
+    font-size: 16px;
+    font-weight: 600;
+    transition:
+        opacity 0.15s,
+        filter 0.15s;
+
+    &:hover:not(:disabled) {
+        filter: brightness(1.08);
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: default;
+    }
+}
+
+.primary {
+    background: var(--accent);
+    color: var(--accent-text);
+}
+
+.secondary {
+    height: 48px;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    font-size: 15px;
+}
+
+.ghost {
+    height: var(--touch);
+    background: transparent;
+    color: var(--text);
+    font-size: 15px;
+}

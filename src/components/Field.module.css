@@ -1,0 +1,29 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input {
+    height: 50px;
+    padding: 0 var(--space-3) 0 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--field);
+    color: var(--text);
+    /* 16px keeps iOS from zooming in on focus */
+    font-size: 16px;
+
+    &::placeholder {
+        color: var(--muted);
+    }
+
+    &:focus-visible {
+        border-color: var(--accent);
+    }
+}
