@@ -5,5 +5,5 @@ export const api = axios.create({ baseURL: '/api', withCredentials: true })
 
 // Parse Error Message
 export function errorMessage(err) {
-    return err.response?.data?.error?.message ?? 'Something went wrong. Try again.'
+    return err.response?.data?.error ?? 'Something went wrong. Try again.'
 }
