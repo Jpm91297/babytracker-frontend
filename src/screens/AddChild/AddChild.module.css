@@ -1,0 +1,41 @@
+.screen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    padding: var(--space-3) var(--space-5) var(--space-7);
+}
+
+.back {
+    align-self: flex-start;
+    min-height: var(--touch);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.subtitle {
+    color: var(--muted);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.formError {
+    font-size: 14px;
+    color: var(--danger);
+}
