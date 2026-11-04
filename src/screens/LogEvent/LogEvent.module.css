@@ -1,0 +1,36 @@
+.screen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    padding: var(--space-3) var(--space-5) var(--space-7);
+}
+
+.back {
+    align-self: flex-start;
+    min-height: var(--touch);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.error {
+    font-size: 14px;
+    color: var(--danger);
+}

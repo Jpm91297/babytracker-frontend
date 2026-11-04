@@ -6,12 +6,12 @@ import { Field } from '../../components/Field.jsx'
 import styles from './AddChild.module.css'
 
 export function AddChild() {
+
     const navigate = useNavigate();
     const [name, setName] = useState('');
     const [birthDate, setBirthDate] = useState('');
     const [error, setError] = useState('');
     const [submitting, setSubmitting] = useState(false);
-
 
     async function handleSubmit(e) {
 

@@ -42,6 +42,21 @@
     list-style: none;
 }
 
+.childLink {
+    display: block;
+    border-radius: var(--radius-xl);
+    color: inherit;
+    font-weight: inherit;
+
+    &:hover {
+        text-decoration: none;
+
+        .child {
+            border-color: var(--accent);
+        }
+    }
+}
+
 .child {
     display: flex;
     flex-direction: column;

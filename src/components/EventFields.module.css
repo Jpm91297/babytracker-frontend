@@ -1,0 +1,51 @@
+.timeRow {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-2);
+
+    & > :first-child {
+        flex: 1;
+        min-width: 0;
+    }
+
+    & input {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+.now {
+    flex-shrink: 0;
+    height: 50px;
+}
+
+.notes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.notesLabel {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.notesInput {
+    padding: var(--space-3) 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--field);
+    color: var(--text);
+    /* 16px keeps iOS from zooming in on focus */
+    font-size: 16px;
+    resize: vertical;
+
+    &:focus-visible {
+        border-color: var(--accent);
+    }
+}
+
+.error {
+    font-size: 14px;
+    color: var(--danger);
+}

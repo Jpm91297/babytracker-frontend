@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { Button } from '../../components/Button.jsx'
 import { Card } from '../../components/Card.jsx'
 import { ThemeToggle } from '../../components/ThemeToggle.jsx'
@@ -14,33 +14,35 @@ function ChildCard(props) {
 
     return (
         <li>
-            <Card className={styles.child}>
-                <div className={styles.identity}>
-                    <span className={styles.avatar} aria-hidden="true">
-                        {child.name[0].toUpperCase()}
-                    </span>
-                    <div>
-                        <h2 className={styles.name}>{child.name}</h2>
-                        {child.birthDate && (
-                            <p className={styles.birthDate}>
-                                {formatBirthDate(child.birthDate)}
-                            </p>
-                        )}
+            <Link to={`/children/${child.id}`} className={styles.childLink}>
+                <Card className={styles.child}>
+                    <div className={styles.identity}>
+                        <span className={styles.avatar} aria-hidden="true">
+                            {child.name[0].toUpperCase()}
+                        </span>
+                        <div>
+                            <h2 className={styles.name}>{child.name}</h2>
+                            {child.birthDate && (
+                                <p className={styles.birthDate}>
+                                    {formatBirthDate(child.birthDate)}
+                                </p>
+                            )}
+                        </div>
                     </div>
-                </div>
-                <div className={styles.lastEvents}>
-                    <p className={`${styles.lastEvent} ${styles.feed}`}>
-                        {child.lastFeedAt
-                            ? `Fed ${timeAgo(child.lastFeedAt)}`
-                            : 'No feeds yet'}
-                    </p>
-                    <p className={`${styles.lastEvent} ${styles.diaper}`}>
-                        {child.lastDiaperAt
-                            ? `Diaper ${timeAgo(child.lastDiaperAt)}`
-                            : 'No diapers yet'}
-                    </p>
-                </div>
-            </Card>
+                    <div className={styles.lastEvents}>
+                        <p className={`${styles.lastEvent} ${styles.feed}`}>
+                            {child.lastFeedAt
+                                ? `Fed ${timeAgo(child.lastFeedAt)}`
+                                : 'No feeds yet'}
+                        </p>
+                        <p className={`${styles.lastEvent} ${styles.diaper}`}>
+                            {child.lastDiaperAt
+                                ? `Diaper ${timeAgo(child.lastDiaperAt)}`
+                                : 'No diapers yet'}
+                        </p>
+                    </div>
+                </Card>
+            </Link>
         </li>
     );
 };

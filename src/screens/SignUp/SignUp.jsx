@@ -33,7 +33,7 @@ export function SignUp() {
     return (
         <main className={styles.screen}>
             <div className={styles.topBar}>
-                <Link to="/signin" className={styles.back} aria-label="Back to sign in">
+                <Link to="/signin" className={styles.back}>
                     <svg
                         aria-hidden="true"
                         width="22"

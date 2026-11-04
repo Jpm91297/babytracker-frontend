@@ -1,0 +1,39 @@
+.control {
+    display: flex;
+    gap: var(--space-1);
+    padding: var(--space-1);
+    border-radius: var(--radius-lg);
+    background: var(--track);
+}
+
+.option {
+    position: relative;
+    flex: 1;
+    min-height: var(--touch);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--space-2);
+    border-radius: var(--radius-md);
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:has(.input:checked) {
+        background: var(--card);
+        color: var(--text);
+    }
+
+    &:has(.input:focus-visible) {
+        box-shadow: var(--focus-ring);
+    }
+}
+
+.input {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
